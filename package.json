@@ -1,0 +1,27 @@
+{
+  "name": "markdown-it-copy",
+  "version": "0.0.0",
+  "description": "A vuepress-plugin that copy code and others.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown-it-plugin",
+    "markdown-it",
+    "markdown",
+    "vuepress",
+    "copy",
+    "code-copy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ReAlign/markdown-it-copy.git"
+  },
+  "author": "ReAlign",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ReAlign/markdown-it-copy/issues"
+  },
+  "homepage": "https://github.com/ReAlign/markdown-it-copy#readme"
+}
