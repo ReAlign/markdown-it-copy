@@ -1,0 +1,4 @@
+# 忽略目录
+tests/
+node_modules/
+packages/

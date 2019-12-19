@@ -1,0 +1,12 @@
+{
+  "root": true,
+  "extends": "eslint-config-airbnb",
+  "env": {
+    "node": true,
+    "commonjs": true
+  },
+  "plugins": [],
+  "rules": {
+    "no-param-reassign": 0
+  }
+}
