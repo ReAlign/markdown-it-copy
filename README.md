@@ -6,6 +6,12 @@
 
 > A vuepress-plugin that copy code and others.
 
+## Example
+
+[🔗 example](https://realign.github.io/markdown-it-copy/)
+
+![image/normal/2019-12-20/img-1576846189765-9365.png](https://public-bucket-realign.nos-eastchina1.126.net/image/normal/2019-12-20/img-1576846189765-9365.png)
+
 ## Installation
 
 ```bash
