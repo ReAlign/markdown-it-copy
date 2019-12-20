@@ -10,7 +10,7 @@
 
 [🔗 example](https://realign.github.io/markdown-it-copy/)
 
-![image/normal/2019-12-20/img-1576846189765-9365.png](https://public-bucket-realign.nos-eastchina1.126.net/image/normal/2019-12-20/img-1576846189765-9365.png)
+![image_png](https://img.alicdn.com/tfs/TB1fcYbrhD1gK0jSZFKXXcJrVXa-1764-830.png)
 
 ## Installation
 
