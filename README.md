@@ -4,7 +4,7 @@
 [![download][downloads-image]][github-url]
 [![NPM][nodei-image]][npm-url]
 
-> A vuepress-plugin that copy code and others.
+> A markdown-it-plugin that copy code and others.
 
 ## Example
 
