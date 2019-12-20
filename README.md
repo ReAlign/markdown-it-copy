@@ -1,7 +1,7 @@
 # markdown-it-copy
 
 [![NPM version][npm-image]][npm-url]
-[![download][downloads-image]][github-url]
+[![download][downloads-image]][github-url]<br>
 [![NPM][nodei-image]][npm-url]
 
 > A markdown-it-plugin that copy code and others.

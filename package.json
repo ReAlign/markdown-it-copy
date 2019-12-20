@@ -1,7 +1,7 @@
 {
   "name": "markdown-it-copy",
-  "version": "1.0.0",
-  "description": "A vuepress-plugin that copy code and others.",
+  "version": "1.0.1",
+  "description": "A markdown-it-plugin that copy code and others.",
   "main": "index.js",
   "scripts": {
     "css": "stylus ./theme/default.styl -o ./theme/default.css",
