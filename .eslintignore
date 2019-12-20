@@ -2,3 +2,5 @@
 tests/
 node_modules/
 packages/
+
+lib/code.js

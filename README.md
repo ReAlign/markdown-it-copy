@@ -18,33 +18,38 @@ npm install markdown-it-copy -S
 
 ```js
 const options = {
-    btnText: '', // 'Copy' | button text
-    extraHtmlBeforeBtn: '', // '' | a html-fragment before <button>
-    extraHtmlAfterBtn: '', // '' | a html-fragment after <button>
+    btnText: String, // 'copy' | button text
+    failText: String, // 'copy fail' | copy-fail text
+    successText: String, // 'copy success' | copy-success text
+    successTextDelay: Number, // 2000 | successText show time [ms]
+    extraHtmlBeforeBtn: String, // '' | a html-fragment before <button>
+    extraHtmlAfterBtn: String, // '' | a html-fragment after <button>
 };
 
 const md = require('markdown-it')()
-            .use(require('markdown-it-copy'), [, options]);
+    .use(require('markdown-it-copy'), options);
 ```
 
-### In-PageAfterMarkdownRendered
+### Style of Button and Notify
 
-It will call `window.MDIC.btnClick` when copy-button clicked, so need a window object in the page that after markdown rendered. as:
+Normal-theme path: `./theme/default.css`
 
-```js
-window.MDIC = {
-    // btn is button-element
-    // copy-code in: btn.dataset.mdiccont
-    btnClick(btn) {
-        // Todo
-    },
-};
+also, you can write style by yourself.
+
+the html structure and class as follow:
+
+```html
+<div class="m-mdic-copy-wrapper">
+    ${extraHtmlBeforeBtn}
+    <div class="u-mdic-copy-notify">
+        ${successText}
+    </div>
+    <button class="u-mdic-copy-btn j-mdic-copy-btn">
+        ${btnText}
+    </button>
+    ${extraHtmlAfterBtn}
+</div>
 ```
-
-## ChangeLog
-
-* v0.1.0
-  * 2019-12-19
 
 [github-url]: https://github.com/ReAlign/markdown-it-copy
 [npm-url]: https://www.npmjs.com/package/markdown-it-copy

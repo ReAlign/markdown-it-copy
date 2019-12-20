@@ -1,0 +1,37 @@
+$posAbs = 16px
+
+normal-style()
+  top 0
+  right 0
+  padding 3px 6px
+  border 0
+  border-radius 3px
+  background none
+  font-family system-ui
+  font-size 12px
+  line-height 18px
+  color #666
+  outline none
+
+pre
+  position relative
+
+.m-mdic-copy-wrapper
+  position absolute
+  top $posAbs
+  right $posAbs
+  div.u-mdic-copy-notify
+    display none
+    position absolute
+    normal-style()
+    right 100%
+    padding-right 4px
+  button.u-mdic-copy-btn
+    position relative
+    normal-style()
+    opacity .3
+    cursor pointer
+
+    transition opacity .2s
+    &:hover
+      opacity 1
