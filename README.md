@@ -20,7 +20,7 @@ npm install markdown-it-copy -S
 
 ## Usage
 
-### In-Plugin
+### Plugin
 
 ```js
 const options = {
@@ -34,11 +34,34 @@ const options = {
 
 const md = require('markdown-it')()
     .use(require('markdown-it-copy'), options);
+
+md.render(`${mdText}`);
+
+// Tips: you may need to highlight your code, as follow:
+
+const hljs = require('highlight.js');
+const hlOpts = {
+  highlight(str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(lang, str).value;
+      } catch (__) {
+        console.log(__);
+      }
+    }
+    return '';
+  },
+};
+
+require('markdown-it')(hlOpts);
 ```
 
 ### Style of Button and Notify
 
-Normal-theme path: `./theme/default.css`
+Normal-theme:
+
+* css: [default.css](https://github.com/ReAlign/markdown-it-copy/blob/master/theme/default.css)
+* stylus: [default.styl](https://github.com/ReAlign/markdown-it-copy/blob/master/theme/default.styl)
 
 also, you can write style by yourself.
 

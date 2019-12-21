@@ -1,4 +1,6 @@
-# Test Copy
+# Copy
+
+[Usage](https://github.com/ReAlign/markdown-it-copy#plugin)
 
 ## less
 
