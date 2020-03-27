@@ -99,6 +99,15 @@ the html structure and class as follow:
 * [new function]
   * Support show `code-language` before `btn` or `extraHtmlBeforeBtn`
 
+#### 1.1.1
+
+* [fix bug]
+  * Compatible with a variety of templates
+    * `<div class="language-js">`
+    * `<code class="language-js">`
+    * `<pre class="language-js">`
+    * etc.
+
 [github-url]: https://github.com/ReAlign/markdown-it-copy
 [npm-url]: https://www.npmjs.com/package/markdown-it-copy
 [npm-image]: https://img.shields.io/npm/v/markdown-it-copy.svg
