@@ -23,13 +23,18 @@ const enhance = (render, options = {}) => (...args) => {
     successTextDelay = 2000, // successText show time [ms]
     extraHtmlBeforeBtn = '', // '' | a html-fragment before <button>
     extraHtmlAfterBtn = '', // '' | a html-fragment after <button>
+    showCodeLanguage = false, // false | show code language
+    // before [btn || extraHtmlBeforeBtn] | [add-after-0.2.0]
   } = options;
   const [tokens = {}, idx = 0] = args;
   // origin writed-code
   const cont = _.strEncode(tokens[idx].content || '');
   const uuid = `j-notify-${_.generateUuid()}`;
+  const originResult = render.apply(this, args);
+  const langFrag = showCodeLanguage ? _.getCodeLangFragment(originResult) : '';
   const tpls = [
     '<div class="m-mdic-copy-wrapper">',
+    `${langFrag}`,
     `${extraHtmlBeforeBtn}`,
     `<div class="u-mdic-copy-notify" id="${uuid}">${successText}</div>`,
     '<button ',
@@ -42,10 +47,7 @@ const enhance = (render, options = {}) => (...args) => {
     `${extraHtmlAfterBtn}`,
     '</div>',
   ];
-  const copyTag = tpls.join('');
-
-  const originResult = render.apply(this, args);
-  const newResult = originResult.replace(LAST_TAG, `${copyTag}${LAST_TAG}`);
+  const newResult = originResult.replace(LAST_TAG, `${tpls.join('')}${LAST_TAG}`);
 
   return newResult;
 };

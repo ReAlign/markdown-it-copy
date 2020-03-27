@@ -6,6 +6,16 @@ pre {
   top: 16px;
   right: 16px;
 }
+.m-mdic-copy-wrapper span.u-mdic-copy-code_lang {
+  position: absolute;
+  top: 3px;
+  right: calc(100% + 4px);
+  font-family: system-ui;
+  font-size: 12px;
+  line-height: 18px;
+  color: #666;
+  opacity: 0.3;
+}
 .m-mdic-copy-wrapper div.u-mdic-copy-notify {
   display: none;
   position: absolute;
@@ -19,7 +29,9 @@ pre {
   font-size: 12px;
   line-height: 18px;
   color: #666;
+  opacity: 0.3;
   outline: none;
+  opacity: 1;
   right: 100%;
   padding-right: 4px;
 }
@@ -35,8 +47,8 @@ pre {
   font-size: 12px;
   line-height: 18px;
   color: #666;
-  outline: none;
   opacity: 0.3;
+  outline: none;
   cursor: pointer;
   transition: opacity 0.2s;
 }

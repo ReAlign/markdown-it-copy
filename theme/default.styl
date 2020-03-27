@@ -1,4 +1,12 @@
 $posAbs = 16px
+$font-color = #666
+
+normal-font-style()
+  font-family system-ui
+  font-size 12px
+  line-height 18px
+  color $font-color
+  opacity 0.3
 
 normal-style()
   top 0
@@ -7,10 +15,7 @@ normal-style()
   border 0
   border-radius 3px
   background none
-  font-family system-ui
-  font-size 12px
-  line-height 18px
-  color #666
+  normal-font-style()
   outline none
 
 pre
@@ -20,16 +25,21 @@ pre
   position absolute
   top $posAbs
   right $posAbs
+  span.u-mdic-copy-code_lang
+    position absolute
+    top 3px
+    right calc(100% + 4px)
+    normal-font-style()
   div.u-mdic-copy-notify
     display none
     position absolute
     normal-style()
+    opacity 1
     right 100%
     padding-right 4px
   button.u-mdic-copy-btn
     position relative
     normal-style()
-    opacity .3
     cursor pointer
 
     transition opacity .2s

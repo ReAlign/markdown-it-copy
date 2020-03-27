@@ -30,6 +30,7 @@ const options = {
     successTextDelay: Number, // 2000 | successText show time [ms]
     extraHtmlBeforeBtn: String, // '' | a html-fragment before <button>
     extraHtmlAfterBtn: String, // '' | a html-fragment after <button>
+    showCodeLanguage: Boolean, // false | show code language before [btn || extraHtmlBeforeBtn] | [add-after-0.2.0]
 };
 
 const md = require('markdown-it')()
@@ -69,6 +70,8 @@ the html structure and class as follow:
 
 ```html
 <div class="m-mdic-copy-wrapper">
+    <!-- if need show it -->
+    <span class="u-mdic-copy-code_lang">${codeLang}</span>
     ${extraHtmlBeforeBtn}
     <div class="u-mdic-copy-notify">
         ${successText}
@@ -79,6 +82,22 @@ the html structure and class as follow:
     ${extraHtmlAfterBtn}
 </div>
 ```
+
+## Releases
+
+### 1.0.x
+
+#### 1.0.0、1.0.1
+
+* [new function]
+  * Support basic copy function
+
+### 1.1.x
+
+#### 1.1.0
+
+* [new function]
+  * Support show `code-language` before `btn` or `extraHtmlBeforeBtn`
 
 [github-url]: https://github.com/ReAlign/markdown-it-copy
 [npm-url]: https://www.npmjs.com/package/markdown-it-copy

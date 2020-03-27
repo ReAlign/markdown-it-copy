@@ -23,7 +23,9 @@ const mdText = fs.readFileSync(mdTextPath).toString();
 const originHtml = fs.readFileSync(originHtmlPath).toString();
 
 const md = require('markdown-it')(hlOpts)
-  .use(require('../index'));
+  .use(require('../index'), {
+    showCodeLanguage: true,
+  });
 
 const result = md.render(mdText);
 
