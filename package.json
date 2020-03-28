@@ -1,6 +1,6 @@
 {
   "name": "markdown-it-copy",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "A markdown-it-plugin that copy code and others.",
   "main": "index.js",
   "scripts": {

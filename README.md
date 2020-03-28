@@ -108,6 +108,13 @@ the html structure and class as follow:
     * `<pre class="language-js">`
     * etc.
 
+#### 1.1.2
+
+* [fix bug]
+  * `Single quotes` encode
+    * error: `'` -> `&apos;`
+    * ok: `'` -> `\'`
+
 [github-url]: https://github.com/ReAlign/markdown-it-copy
 [npm-url]: https://www.npmjs.com/package/markdown-it-copy
 [npm-image]: https://img.shields.io/npm/v/markdown-it-copy.svg
