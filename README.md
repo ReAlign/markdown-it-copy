@@ -6,6 +6,10 @@
 
 > A markdown-it-plugin that copy code and others.
 
+## Todo
+
+* [ ] 复制内容尾部增加版权说明
+
 ## Example
 
 [🔗 example](https://realign.github.io/markdown-it-copy/)
