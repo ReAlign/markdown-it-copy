@@ -24,10 +24,13 @@ const enhance = (render, options = {}) => (...args) => {
     extraHtmlBeforeBtn = '', // '' | a html-fragment before <button>
     extraHtmlAfterBtn = '', // '' | a html-fragment after <button>
     showCodeLanguage = false, // false | show code language
-    // before [btn || extraHtmlBeforeBtn] | [add-after-0.2.0]
+    // before [btn || extraHtmlBeforeBtn] | [add-after-1.1.0]
+    attachText = '', // '' | some text append copyText
+    // Such as: copyright | [add-after-1.2.0]
   } = options;
   const [tokens = {}, idx = 0] = args;
   // origin writed-code
+  const attachCont = (typeof attachText === 'string') ? attachText : '';
   const cont = _.strEncode(tokens[idx].content || '');
   const uuid = `j-notify-${_.generateUuid()}`;
   const originResult = render.apply(this, args);
@@ -40,6 +43,7 @@ const enhance = (render, options = {}) => (...args) => {
     '<button ',
     'class="u-mdic-copy-btn j-mdic-copy-btn" ',
     `data-mdic-content="${cont}" `,
+    `data-mdic-attach-content="${attachCont}" `,
     `data-mdic-notify-id="${uuid}" `,
     `data-mdic-notify-delay="${successTextDelay}" `,
     `data-mdic-copy-fail-text="${failText}" `,

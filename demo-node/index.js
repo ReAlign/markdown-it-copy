@@ -25,6 +25,7 @@ const originHtml = fs.readFileSync(originHtmlPath).toString();
 const md = require('markdown-it')(hlOpts)
   .use(require('../index'), {
     showCodeLanguage: true,
+    attachText: '@ReAlign Copyright\nanother text',
   });
 
 const result = md.render(mdText);

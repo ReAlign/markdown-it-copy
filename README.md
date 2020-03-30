@@ -34,7 +34,8 @@ const options = {
     successTextDelay: Number, // 2000 | successText show time [ms]
     extraHtmlBeforeBtn: String, // '' | a html-fragment before <button>
     extraHtmlAfterBtn: String, // '' | a html-fragment after <button>
-    showCodeLanguage: Boolean, // false | show code language before [btn || extraHtmlBeforeBtn] | [add-after-0.2.0]
+    showCodeLanguage: Boolean, // false | show code language before [btn || extraHtmlBeforeBtn] | [add-after-1.1.0]
+    attachText: String, // '' | some text append copyText， Such as: copyright | [add-after-1.2.0]
 };
 
 const md = require('markdown-it')()
@@ -118,6 +119,13 @@ the html structure and class as follow:
   * `Single quotes` encode
     * error: `'` -> `&apos;`
     * ok: `'` -> `\'`
+
+### 1.2.x
+
+#### 1.2.0
+
+* [new function]
+  * Support append text behind to copy content, such as: Copyright info.
 
 [github-url]: https://github.com/ReAlign/markdown-it-copy
 [npm-url]: https://www.npmjs.com/package/markdown-it-copy
